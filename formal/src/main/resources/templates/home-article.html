@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫画详情</title>
+	<link rel="stylesheet" href="css/home-base.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="shortcut icon" href=" m.favicon.ico" />
+</head>
+<body>
+    <!-- 头部框架开始 -->
+	<div class="header">
+		<div class="w1100">
+			<!-- 网站logo开始 -->
+			<h1 class="logo fl">
+				<a th:href="default"><img src="img/logo.png" alt="好看漫画"></a>
+			</h1>
+			<!-- 网站logo结束 -->
+			<!-- 网站导航开始 -->
+			<ul class="navigation fr">
+				<li>
+					<a class="active" th:href="default">首页</a>
+				</li>
+				<li>
+					<a th:href="article">个人中心</a>
+				</li>
+			</ul>
+			<!-- 网站导航结束 -->
+		</div>
+	</div>
+	<!-- 头部框架结束 -->
+    <!-- 文章框架开始 -->
+	<div class="article">
+		<div class="w1100">
+			<div class="container">
+				<div class="article-header">
+					<h3 class="article-title">漫画标题</h3>
+					<div class="article-info">
+						<span class="author">发布作者</span>
+						<span>发布时间</span>
+					</div>
+				</div>
+				<div class="article-content">
+					<p>漫画内容<img src="" alt=""></p>
+				</div>
+				<div class="article-comment">
+					<h4>评论</h4>
+					
+					<form class="comment-form">
+						<textarea class="comment"></textarea>
+						<div class="items">
+							<input type="submit" value="提交">
+						</div>
+					</form>
+					<div class="comment-list">
+						<div class="mb10">
+							<div class="article-info">
+								<span class="author">评论者</span>
+								<span>评论时间</span>
+								<span>评论者邮箱</span>
+							</div>
+							<div class="comment-content">
+								评论内容
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 文章框架结束 -->
+    
+</body>
+</html>

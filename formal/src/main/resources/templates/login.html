@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jQuery/jQuery.mini.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="shortcut icon" href=" m.favicon.ico" />
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-body login300">
+        <div class="login-container">
+            <h4 class="title">登录</h4>
+            <div class="login">
+                <form th:action="@{/tologin}" method="post">
+                    <div class="form-group">
+                        <label>邮件</label>
+                        <input type="email" name="username" class="form-control" placeholder="请输入邮件地址" >
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" name="password" class="form-control" placeholder="请输入密码" >
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">登录</button>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label  for="remember" class="remember">记住我</label >
+                </form>
+                <div><a th:href="register">没有账号？点我注册</a></div>
+            </div>
+            <div class="tips"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

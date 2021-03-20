@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jQuery/jQuery.mini.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="shortcut icon" href=" m.favicon.ico" />
+</head>
+
+<body>
+    <div class="header">
+        <!-- 网站logo -->
+        <div class="left hl fl"><img src="https://i0.hdslb.com/bfs/vc/fb9521333b8ea79d90bdfc6da31cf83c52d93ec9.png" alt="">
+            <p>好看漫画</p>
+        </div>
+        <div class="right hr fl">
+            <!-- 下拉菜单 用户信息与退出登录 -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger red-button">用户名</button>
+                <button type="button" class="btn btn-danger dropdown-toggle red-button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a th:href="user-self-edit">个人资料</a></li>
+                    <li><a th:href="@{/logout}">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <!-- 侧边栏 -->
+        <div class="left cl fl">
+            <ul class="menu list-unstyled">
+                <li class="one">
+                    <a class="item active" th:href="user">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li class="two">
+                    <a class="item" th:href="article">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        漫画管理
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="right cr fl">
+            <!-- 分类标题 -->
+            <div class="title">
+                <h4>用户</h4>
+
+                <a th:href="user-edit" class="btn btn-primary new">新增用户</a>
+            </div>
+            <!-- /分类标题 -->
+            <!-- 内容列表 -->
+            <table class="table table-striped table-bordered table-hover custom-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>用户名</th>
+                        <th>邮箱</th>
+                        <th>角色</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user:${user}">
+                    <td th:text="${user.getId}"></td>
+                    <td th:text="${user.getName}"></td>
+                    <td th:text="${user.getEmail}"></td>
+                    <td>用户</td>
+                        <td>正常</td>
+                        <td>
+                            <a th:href="@{/update/}+${user.getId()}" class="glyphicon glyphicon-edit"></a>
+                            <a th:href="@{/deleteUser/}+${user.getId()}">
+                            <i class="glyphicon glyphicon-remove"   data-toggle="modal" data-target=".confirm-modal">
+                            </i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- /内容列表 -->
+            <!-- 分页符 -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 删除确认弹出框 -->
+
+            <!-- /删除确认弹出框 -->
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+
+</body>
+
+</html>

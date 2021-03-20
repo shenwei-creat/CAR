@@ -1,0 +1,211 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: rgb(102, 102, 102);
+}
+a{
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+li{
+    list-style: none;
+}
+input{
+    outline: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.left{
+     width: 20%;
+}
+.hl{
+    position: relative;
+    height: 150px;
+    background-color:rgb(201,185,213); 
+    border-bottom-right-radius: 2px;
+     background-image: url(../img/logo背景.png); 
+    background-size: cover;
+    transition: .5s;
+}
+.hl:hover{
+    box-shadow: 0 0 6px;
+    transform: scale(1.02,1.02);
+}
+.hl img{
+     position: absolute;
+     top: 15px;
+     left: 100px;
+     height: 100px;
+}
+.hl p{
+    position: absolute;
+    left: 150px;
+    bottom: 5px;
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(255,200,119);
+}
+.right{
+    width: 80%;
+    /* background-color: skyblue; */
+}
+.hr{
+    position: relative;
+    height: 150px;
+    /* border-bottom: 2px solid rgb(241,243,244); */
+    background-image: url(../img/背景1.jfif) ;  
+    background-size: cover;
+     /* background-color:rgba(92,167,252,.5)   */
+     border-bottom-right-radius: 15px;
+     border-bottom-left-radius: 15px;
+     box-shadow: 0 0 15px;
+    
+}
+.red-button{
+    border-radius: 50%;
+    background-color: rgb(105, 181, 248);
+    border-color:rgb(79, 164, 233);
+}
+.btn-group{
+    position: absolute;
+    top: 50px;
+    right: 80px;
+}
+.menu{
+    margin-top: 50px;
+}
+.menu li a{ 
+    display:inline-block;
+    padding: 15px 0 20px 15px;
+    /* background-color: rosybrown; */
+}
+.one{
+    border-left: 7px solid rgb(71, 179, 222);
+}
+.menu li:hover{
+    border-left: 7px solid rgb(71, 179, 222);
+}
+.menu li a:hover{
+    text-decoration: none;
+}
+.cl{
+    height: 600px;
+    background-color: rgb(245,245,245);
+}
+.cr{
+    position: relative;
+    height: 500px;
+} 
+.pagination{
+    position: absolute;
+    left: 30px;
+}
+.table{
+    margin: 0 0 0 30px;
+    width: 90%;
+}
+.title{
+    position: relative;
+    padding-left: 30px;
+    margin: 20px 0 20px;
+}
+.title h4{
+    font-weight: bold;
+    font-size: 26px;
+    color: #000;
+}
+.title a{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+}
+.table a{
+    color: rgb(43, 202, 64);
+}
+.table i::before{
+    color: rgb(236, 72, 72);
+}
+.form-container{
+    position: relative;
+    padding: 40px;
+    margin: 20px;
+    /* width: 90%; */
+    box-shadow: 0 0 3px;
+    transition: .5s;
+}
+.form-container:hover{
+    box-shadow: 0 0 6px;
+    transform: scale(1.01,1.01);
+}
+.btn-back{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    width: 54px;
+    height: 34px;
+    background-color: rgb(51,122,183);
+    border-radius: 4px;
+    text-align: center;    
+}
+.btn-back:hover{
+    background-color: #204d74;
+
+}
+.btn-back a{
+    color:white;
+    line-height: 34px;
+    text-decoration: none;
+}
+.login-body{
+    position: relative;
+    margin: 100px auto;
+    height: 400px;
+    width: 500px;
+    padding: 30px;
+    background-color: rgba(224, 79, 159, 0.2);
+    box-shadow:  0 0 5px;
+    transition: .5s;
+}
+.login-body h4{
+    position: relative;
+    right: 18px;
+    color: rgb(231, 159, 24);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 1px 2px 3px rgb(33, 32, 34);
+    opacity: .7;
+}
+.login-body .btn{
+    position: absolute;
+    left: 210px;
+    bottom: 15px;
+    width: 80px;
+    opacity: .8;
+    transition: .5s;
+}
+.login-body .btn:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 0 0 5px;
+    background-color: rgb(94, 85, 216);
+}
+.login-body:hover{
+    transform: scale(1.02,1.02);
+}
+.login-body label{
+    font-size: 18px;
+    color: rgba(33, 32, 34,.8);
+}
+.delete{
+    position: absolute;
+    right: 90px;
+    bottom: 15px;
+}
+.login300{
+    height: 300px;
+}

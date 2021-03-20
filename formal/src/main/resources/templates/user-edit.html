@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jQuery/jQuery.mini.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="shortcut icon" href=" m.favicon.ico" />
+</head>
+<body>
+    <div class="header">
+        <!-- 网站logo -->
+        <a th:href="default" <div class="left hl fl"><img src="https://i0.hdslb.com/bfs/vc/fb9521333b8ea79d90bdfc6da31cf83c52d93ec9.png" alt="">
+            <p>好看漫画</p>
+        </div></a>
+        <div class="right hr fl">
+            <!-- 下拉菜单 用户信息与退出登录 -->
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger red-button">用户名</button>
+                <button type="button" class="btn btn-danger dropdown-toggle red-button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a th:href="user-self-edit">个人资料</a></li>
+                    <li><a th:href="@{/logout}">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <!-- 侧边栏 -->
+        <div class="left cl fl">
+            <ul class="menu list-unstyled">
+                <li class="one">
+                    <a class="item active" th:href="user">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li class="two">
+                    <a class="item" th:href="article">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        漫画管理
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="right cr fl">
+            <!-- 分类标题 -->
+            <div class="title">
+                <h4>5b9a716cb2d2bf17706bcc0a</h4>
+                <p class="tips">错误信息</p>
+            </div>
+            <!-- /分类标题 -->
+            <!-- 内容列表 -->
+            <form class="form-container" th:action="users" method="post">
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text"  name="name" class="form-control" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label>邮箱</label>
+                    <input type="email"  name="email" class="form-control" placeholder="请输入邮箱地址">
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password"  name="password" class="form-control" placeholder="请输入密码">
+                </div>
+                <div class="form-group">
+                    <label>角色</label>
+                    <select class="form-control">
+                        <option>普通用户</option>
+                        <option>超级管理员</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>状态</label>
+                    <select class="form-control">
+                        <option>启用</option>
+                        <option>禁用</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <input type="submit" class="btn btn-primary">
+                </div>
+                <div class="btn-back"><a th:href="user">返回</a></div>
+            </form>
+            <!-- /内容列表 -->
+            
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+
+</body>
+</html>

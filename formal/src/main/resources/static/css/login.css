@@ -1,0 +1,14 @@
+body{
+    background-image: url(../img/登录页面背景.png);
+}
+a{
+    color: rgb(70, 96, 243);
+}
+.login-body .remember{
+    font-size: 16px;
+    color:rgb(54, 139, 224);
+    cursor: pointer;
+}
+.login-body .remember:hover{
+    transform: scale(1.02,1.02);
+}

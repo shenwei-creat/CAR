@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jQuery/jQuery.mini.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/admin-base.css">
+    <link rel="shortcut icon" href=" m.favicon.ico" />
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-body">
+        <div class="login-container">
+            <h4 class="title">注册我的账号</h4>
+            <div class="login">
+                <form th:action="@{/toregister}" method="post">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" name="name" class="form-control" placeholder="请输入用户名">
+                    </div>
+                    <div class="form-group">
+                        <label>邮件</label>
+                        <input type="email" name="username" class="form-control" placeholder="请输入邮件地址">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" name="password" class="form-control" placeholder="请输入密码">
+                    </div>
+                    <button type="submit" class="btn btn-primary">注册</button>
+                </form>
+                <div><a th:href="tologin">已有账号？点我登录</a></div>
+            </div>
+            <div class="tips"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
